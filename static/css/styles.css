@@ -1,0 +1,98 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search-location-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search-location {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#sort-price {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#property-list {
+    list-style: none;
+}
+
+#property-list li {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+img {
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw; /* Ширина изображения */
+    height: 400px; /* Высота изображения */
+    object-fit: cover; /* Изображение будет подгоняться по размеру, сохраняя пропорции */
+    border-radius: 15px; /* Радиус скругления углов (по желанию) */
+    margin-bottom: 20px; /* Отступ снизу для пространства между изображениями */
+}

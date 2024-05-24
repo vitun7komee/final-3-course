@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Административная панель</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #495057;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #6c757d;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #343a40;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="url"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Административная панель</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/auth/logout">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Добавить объект</h2>
+        <form id="add-property-form">
+            <input type="text" id="title" placeholder="Название" required>
+            <input type="text" id="description" placeholder="Описание" required>
+            <input type="number" id="price" placeholder="Стоимость" required>
+            <input type="text" id="location" placeholder="Город" required>
+            <input type="url" id="picture" placeholder="Изображение (URL)" required>
+            <button type="submit">Добавить</button>
+        </form>
+        
+        <h2>Редактировать объект</h2>
+        <form id="edit-property-form">
+            <input type="text" id="edit-id" placeholder="ID объекта" required>
+            <input type="text" id="edit-title" placeholder="Название">
+            <input type="text" id="edit-description" placeholder="Описание">
+            <input type="number" id="edit-price" placeholder="Стоимость">
+            <input type="text" id="edit-location" placeholder="Город">
+            <input type="url" id="edit-picture" placeholder="Изображение (URL)">
+            <button type="submit">Редактировать</button>
+        </form>
+
+        <h2>Удалить объект</h2>
+        <form id="delete-property-form">
+            <input type="text" id="delete-id" placeholder="ID объекта" required>
+            <button type="submit">Удалить</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Продажа недвижимости</p>
+    </footer>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
